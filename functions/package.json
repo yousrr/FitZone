@@ -1,0 +1,29 @@
+{
+  "name": "fitlife-firebase-functions",
+  "private": true,
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "tsc",
+    "serve": "firebase emulators:start --only functions,auth,firestore",
+    "shell": "firebase functions:shell",
+    "start": "npm run build && firebase emulators:start --only functions",
+    "deploy": "firebase deploy --only functions",
+    "lint": "echo \"no lint\""
+  },
+  "dependencies": {
+    "axios": "^1.7.7",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^5.1.1"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.14.9",
+    "typescript": "^5.6.3"
+  }
+}
